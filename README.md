@@ -16,9 +16,9 @@ a simple python flask rest API configured with mysql database
  
  run the file conf_apply_kubernetes.ps1 to apply the configuration of kubernetes
  
- check the list of service 
+ check the list of services
  
- exposer le service flask-api with the command "kubectl expose svc falsk-api"
+ expose the service flask-api with the command "kubectl expose svc falsk-api"
  
  check the api on your browser "localhost:8000/ui"
  
