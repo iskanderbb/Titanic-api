@@ -1,6 +1,5 @@
 
 
-une api en python falsk intégré avec un base de donnée mysql:57
 
 a simple python flask rest API configured with mysql database 
 
