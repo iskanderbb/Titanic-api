@@ -21,7 +21,7 @@ separate ansibe configuration as code for the Api on kuberntes
  
  check the list of services
  
- expose the service flask-api with the command "kubectl expose svc falsk-api"
+ expose the service flask-api with the command "kubectl expose svc falsk-api --type=LoadBalancer --name=api "
  
  check the api on your browser "localhost:8000/ui"
  
