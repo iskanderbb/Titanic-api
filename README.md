@@ -1,8 +1,7 @@
 
-
+## pending 
 
 a simple python flask rest API configured with mysql database 
-
 
 # for testing 
 
