@@ -1,0 +1,19 @@
+version: "2"
+services:
+  flask-api:
+    build: .
+    links:
+      - mysqldb
+    ports:
+      - "8001:8000"
+
+  mysqldb:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: titanicdb
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+    
