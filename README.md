@@ -3,7 +3,11 @@
 
 a simple python flask rest API configured with mysql database 
 
-# for testing 
+to be added :
+separate ansibe configuration as code for the Api on kuberntes
+
+
+## for testing 
 
  Download the repo 
 
