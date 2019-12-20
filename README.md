@@ -20,9 +20,7 @@ separate ansibe configuration as code for the Api on kuberntes
  run the file conf_apply_kubernetes.ps1 to apply the configuration of kubernetes
  
  check the list of services
- 
- expose the service flask-api with the command "kubectl expose svc falsk-api --type=LoadBalancer --name=api "
- 
+  
  check the api on your browser "localhost:8000/ui"
  
  
