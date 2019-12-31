@@ -11,8 +11,7 @@ metadata:
   name: mysqldb
 spec:
   replicas: 1
-  strategy:
-    type: Recreate
+  strategy: {}
   template:
     metadata:
       annotations:
@@ -37,17 +36,10 @@ spec:
             secretKeyRef:
               name: mysql-secret
               key: mysql_USERNAME
-        image: dockeropticca/titanic:mysql
+        image: dockeropticca/sherweb_mysqldb:1
         name: mysqldb
         ports:
         - containerPort: 3306
         resources: {}
-        volumeMounts:
-        - mountPath: /docker-entrypoint-initdb.d/
-          name: mysqldb-claim0
       restartPolicy: Always
-      volumes:
-      - name: mysqldb-claim0
-        persistentVolumeClaim:
-          claimName: mysqldb-claim0
 status: {}
