@@ -6,14 +6,17 @@ services:
       - mysqldb
     ports:
       - "8001:8000"
-
   mysqldb:
     build: ./db/
-    restart: always
-    ports:
-      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: titanicdb
-    
-    
+      MYSQL_ROOT_HOST: '%'
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+
+  
+     
