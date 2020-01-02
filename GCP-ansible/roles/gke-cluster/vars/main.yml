@@ -1,0 +1,11 @@
+gkename: cluster-sherweb-api-1
+initial_node_count: 3
+machine_type: n1-standard-1	
+disk_size_gb: 10 
+zone: us-central1-a
+project: sherweb-poject
+auth_kind: serviceaccount
+service_account_file: sherweb-poject-sa.json
+# gke node pool
+npname: pool-sherweb-1
+np_initial_node_count: 2 

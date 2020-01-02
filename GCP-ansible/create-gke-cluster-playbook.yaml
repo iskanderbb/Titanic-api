@@ -1,0 +1,6 @@
+- name: gcp_cluster - Creates a GCP Cluster
+  hosts: all
+  connection: local
+  gather_facts: false
+  roles:
+   - gke-cluster

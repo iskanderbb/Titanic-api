@@ -1,0 +1,30 @@
+
+- name: connect to Sherweb project 
+  shell: gcloud container clusters get-credentials '{{ name_cluster }}' --zone {{zone}} --project '{{ project }}'
+
+#- name: install nginx 
+#  shell: kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
+
+
+- pause:
+    seconds: 20
+
+#- name: copy yaml file for ingress
+#  template:
+#    src: ../templates/titanic-ingress.yaml
+#    dest: /tmp/titanic-ingress.yaml
+
+#- name: create ingress for devops  services
+#  shell: kubectl apply -f /tmp/titanic-ingress.yaml
+
+
+- name: Copy titanic app YAML to host
+  template:
+    src: Titanic-testapp.yaml
+    dest: /tmp/Titanic-testapp.yaml
+
+- name: Deploying titanic fask api with mysql database  
+  command: "kubectl apply -f /tmp/Titanic-testapp.yaml"
+
+
+      

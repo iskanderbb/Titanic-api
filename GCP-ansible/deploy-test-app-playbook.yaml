@@ -1,0 +1,6 @@
+- name: gcp_cluster - deploy the test titanic app
+  hosts: all
+  connection: local
+  gather_facts: false
+  roles:
+   - app-deploy
