@@ -28,13 +28,14 @@ and deploy the sample application
  check the api on your browser "localhost:8000/ui"
  
  
-##GKE deployment:
+## GKE deployment:
 
  the service account json file "sherweb-poject-sa.json" is not pushed to this public repository for security reasons
 
  can be tested by modifying main files under vars folders and including service account json file with GKE admin role
  
  link to api deployed on GCP : http://34.66.42.61:8080/ui
+ 
  
  
 
